@@ -2,7 +2,7 @@ import { loginRequest, red, green } from "./requests.js";
 import { toast } from "./toast.js";
 
 const redirectUserPage = () => {
-  open("./userPage.html", "_self");
+  window.location.href = "./pages/userPage.html"
 };
 
 const hasToken = () => {
