@@ -2,8 +2,6 @@ import { toast } from "./toast.js";
 
 const baseUrl = "https://dummyjson.com";
 
-const token = JSON.parse(localStorage.getItem("@diamond:token")) || "";
-
 export const red = "#df1545";
 export const green = "#36B37E";
 
@@ -14,20 +12,21 @@ export const loginRequest = async (userCredentials) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(userCredentials),
-  }).then(async (res) => {
+  })
+  .then(async (res) => {
     if (res.ok) {
       return await res.json();
     } else {
-      const response = await res.json();
       toast(red, "E-mail ou senha inválido(a).");
-      return response;
+      return null;
     }
   });
-
   return token;
 };
 
 export const getUserData = async (userId) => {
+  const token = JSON.parse(localStorage.getItem("@diamond:token"));
+
   const user = await fetch(`${baseUrl}/auth/user/${userId}`, {
     method: "GET",
     headers: {
@@ -38,9 +37,8 @@ export const getUserData = async (userId) => {
     if (res.ok) {
       return await res.json();
     } else {
-      const response = await res.json();
       toast(red, "Algo deu errado, tente novamente mais tarde");
-      return response;
+      return null;
     }
   });
 

@@ -38,10 +38,8 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: var(--font-family-1);
-  line-height: 150%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -52,10 +50,10 @@ body {
   right: 2rem;
 
   border: 1px solid;
-  color: var(--color-mode);
+  color: var(--color-white);
 
-  width: 300px;
-  height: 100px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 
   display: flex;
   align-items: center;
@@ -71,10 +69,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-.input__focus {
-  border-color: var(--color-action-2);
 }
 
 @keyframes fadeIn {

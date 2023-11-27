@@ -13,9 +13,11 @@
     rgba(63, 156, 200, 1) 24%,
     rgba(23, 204, 222, 1) 60%
   );
+  gap: 0.5rem;
 }
 
 .footer__text {
   font-weight: bold;
   color: var(--color-white);
+  font-size: 1rem;
 }

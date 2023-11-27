@@ -5,7 +5,14 @@ const redirectUserPage = () => {
   open("../pages/userPage.html", "_self");
 };
 
-const handleLogin = () => {
+const hasToken = () => {
+  const localToken = localStorage.getItem("@diamond:token");
+  if (localToken !== null) {
+    redirectUserPage();
+  }
+};
+
+const handleLogin = async () => {
   const inputs = document.querySelectorAll("input");
   const formLogin = document.querySelector(".form__login");
   let count = 0;
@@ -27,19 +34,32 @@ const handleLogin = () => {
       toast(red, "Por favor preencha todos os campos do formulário");
     } else {
       const token = await loginRequest(userCredentials);
-      toast(green, "Login realizado com sucesso");
-      localStorage.setItem("@diamond:token", JSON.stringify(token.token));
-      localStorage.setItem("@diamond:user-id", JSON.stringify(token.id));
 
-      userCredentials = {};
+      if (token !== null) {
+        toast(green, "Login realizado com sucesso");
 
-      inputs.forEach((input) => {
-        input.value = "";
-      });
+        localStorage.setItem("@diamond:token", JSON.stringify(token.token));
+        localStorage.setItem("@diamond:user-id", JSON.stringify(token.id));
 
-      redirectUserPage();
+        userCredentials = {};
+
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+
+        setTimeout(() => {
+          redirectUserPage();
+        }, 3000);
+      } else {
+        userCredentials = {};
+
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+      }
     }
   });
 };
 
+hasToken();
 handleLogin();
