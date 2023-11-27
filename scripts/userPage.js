@@ -5,7 +5,7 @@ const backButton = document.querySelector(".back_button");
 const hasToken = () => {
   const localToken = localStorage.getItem("@diamond:token");
   if (!localToken) {
-    open("../index.html", "_self");
+    open("./index.html", "_self");
   }
 };
 
