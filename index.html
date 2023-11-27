@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/diamond.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <title>Diamond Access - Home</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <img
+        src="./assets/logo_colorida.png"
+        class="header__logo"
+        alt="Logo colorida da Diamond Solutions"
+      />
+    </header>
+    <main class="main__container">
+      <section class="login__section">
+        <h1>Login</h1>
+        <p>Preencha os campos para realizar login</p>
+        <form class="form__login">
+          <div class="input__container">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Digite o username"
+              id="username"
+              class="input"
+              required
+            />
+          </div>
+          <div class="input__container">
+            <label for="password">Senha:</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite a senha"
+              id="password"
+              class="input"
+              required
+            />
+          </div>
+          <button type="submit" class="login-button">Login</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer__container">
+      <p class="footer__text">© Diamond Solutions - 2023</p>
+      <p class="footer__text">Desenvolvido por: Victor Almeida</p>
+    </footer>
+    <div class="toast__container hidden">
+      <p></p>
+    </div>
+    <script type="module" src="./scripts/home.js"></script>
+  </body>
+</html>

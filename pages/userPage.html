@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/diamond.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/userPage.css" />
+    <title>Diamond Access - Usuário</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <img
+        src="../assets/logo_colorida.png"
+        class="header__logo"
+        alt="Logo colorida da Diamond Solutions"
+      />
+      <button type="button" class="back_button">Voltar</button>
+    </header>
+    <main class="main__container">
+      <div class="card__container">
+        <header class="card__header">
+          <h1>Identification Card</h1>
+        </header>
+        <div class="card__credentials">
+          <div class="card__left-container">
+            <picture class="card__photo-container"> </picture>
+          </div>
+          <div class="right-container">
+            <div class="card__user-data"></div>
+            <div class="card__user-characteristics"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer__container">
+      <p class="footer__text">© Diamond Solutions - 2023</p>
+      <p class="footer__text">Desenvolvido por: Victor Almeida</p>
+    </footer>
+    <div class="toast__container hidden">
+      <p></p>
+    </div>
+    <script type="module" src="../scripts/userPage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+.main__container {
+  background-color: var(--color-gray-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.card__container {
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding: 1rem 0rem;
+  background-color: #f2f6ff;
+}
+
+.card__header {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+.card__credentials {
+  width: 100%;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card__left-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__photo-container {
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  background-color: #2f87af;
+}
+
+.card__user-photo {
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.card__signature {
+  font-family: var(--font-family-2);
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.right-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card__user-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card__user-data p {
+  font-weight: 600;
+}
+
+.card__user-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__user-name h2 {
+  font-size: 2rem;
+}
+
+.card__user-address {
+  font-weight: bold;
+}
+
+.card__user-address p {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card__user-characteristics {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: center;
+  gap: 0.5rem;
+}
+
+.card__user-characteristic {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (min-width: 700px) {
+  .card__header {
+    padding: 1rem;
+  }
+
+  .card__header > h1 {
+    font-size: 2.25rem;
+  }
+
+  .card__credentials {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .right-container {
+    height: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .card__user-data {
+    height: 70%;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+
+  .card__user-characteristics {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .card__user-characteristic {
+    font-size: 0.9rem;
+  }
+}

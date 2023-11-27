@@ -1,0 +1,21 @@
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+  background: rgb(63, 156, 200);
+  background: linear-gradient(
+    151deg,
+    rgba(63, 156, 200, 1) 24%,
+    rgba(23, 204, 222, 1) 60%
+  );
+}
+
+.footer__text {
+  font-weight: bold;
+  color: var(--color-white);
+}

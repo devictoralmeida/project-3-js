@@ -1,0 +1,31 @@
+.header__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  padding: 1rem 0rem;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+}
+
+.back_button {
+  background-color: var(--color-brand-1);
+  color: var(--color-white);
+  border: none;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  max-width: 80px;
+  font-family: var(--font-family-1);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+.header__logo {
+  width: 20%;
+  min-width: 200px;
+}
